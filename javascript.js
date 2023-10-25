@@ -7,6 +7,9 @@ function getComputerChoice(){
     return computerSelection;
 }
 
+let playerScore = 0;
+let computerScore = 0;
+
 function playRound(playerSelection, computerSelection){
     //if player choses rock
     if (playerSelection != computerSelection){
@@ -50,8 +53,8 @@ function playRound(playerSelection, computerSelection){
 }
 
 function game(){
-    let playerScore = 0;
-    let computerScore = 0;
+    playerScore = 0;
+    computerScore = 0;
     for (i=0; i<5; i++){
             const playerSelection = "rock";
             const computerSelection = getComputerChoice();
