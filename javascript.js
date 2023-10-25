@@ -42,4 +42,14 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-getComputerChoice();
+/*function game(){
+    let playerScore = 0;
+    let computerScore = 0;
+    for (i=0; i<5; i++){
+        playRound(playerSelection, computerSelection);
+    }
+}*/
+
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+playRound(playerSelection, computerSelection);
