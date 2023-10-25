@@ -49,17 +49,22 @@ function playRound(playerSelection, computerSelection){
     
 }
 
-/* function game(){
+function game(){
     let playerScore = 0;
     let computerScore = 0;
-    playRound(playerSelection, computerSelection);
-        for (i=0; i<5; i++){
+    for (i=0; i<5; i++){
             const playerSelection = "rock";
             const computerSelection = getComputerChoice();
             playRound(playerSelection, computerSelection);
     }
-}*/
+    if (playerScore > computerScore){
+        console.log(`Congratulations! You won by ${playerScore} : ${computerScore}!`);
+    }
+    else if (playerScore < computerScore){
+        console.log(`You lost... by ${playerScore} : ${computerScore}.`);
+    }
+    else {
+        console.log("It's a tie. Nobody won.");
+    }
+}
 
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-playRound(playerSelection, computerSelection);
