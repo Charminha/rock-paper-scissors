@@ -56,9 +56,10 @@ function game(){
     playerScore = 0;
     computerScore = 0;
     for (i=0; i<5; i++){
-            const playerSelection = "rock";
-            const computerSelection = getComputerChoice();
-            playRound(playerSelection, computerSelection);
+        // TODO prompt choice from user
+        const playerSelection = "rock";
+        const computerSelection = getComputerChoice();
+        playRound(playerSelection, computerSelection);
     }
     if (playerScore > computerScore){
         console.log(`Congratulations! You won by ${playerScore} : ${computerScore}!`);
