@@ -56,8 +56,7 @@ function game(){
     playerScore = 0;
     computerScore = 0;
     for (i=0; i<5; i++){
-        // TODO prompt choice from user
-        const playerSelection = "rock";
+        const playerSelection = prompt("Enter your choice. Rock, paper or scissors?").toLowerCase();
         const computerSelection = getComputerChoice();
         playRound(playerSelection, computerSelection);
     }
