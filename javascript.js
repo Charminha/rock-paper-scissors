@@ -11,44 +11,52 @@ let playerScore = 0;
 let computerScore = 0;
 
 function playRound(playerSelection, computerSelection){
-    //if player choses rock
+    const resultField = document.querySelector("#result-field");
+    const result = document.createElement("p");
+    const playerScoreField = document.querySelector("#your-score");
+    const computerScoreField = document.querySelector("#computer-score");
     if (playerSelection != computerSelection){
+        //if player choses rock
         if (playerSelection == "rock"){
             if (computerSelection == "paper"){
-                console.log("Paper beats rock! You lose!");
+                result.textContent = "Paper beats rock! You lose!";
                 computerScore += 1;
             }
             else {
-                console.log("Rock beats scissors! You win!");
+                result.textContent = "Rock beats scissors! You win!";
                 playerScore += 1;
             }
         }
         //if player choses paper
         if (playerSelection == "paper"){
             if (computerSelection == "scissors"){
-                console.log("Scissors beat paper! You lose!");
+                result.textContent = "Scissors beat paper! You lose!";
                 computerScore += 1;
             }
             else {
-                console.log("Paper beats rock! You win!");
+                result.textContent = "Paper beats rock! You win!";
                 playerScore += 1;
             }
         }
         //if player choses scissors
         if (playerSelection == "scissors"){
             if (computerSelection == "rock"){
-                console.log("Rock beats scissors! You lose!");
+                result.textContent = "Rock beats scissors! You lose!";
                 computerScore += 1;
             }
             else {
-                console.log("Scissors beat paper! You win!");
+                result.textContent = "Scissors beat paper! You win!";
                 playerScore += 1;
             }
         }
     }
     else {
-        console.log("That's a tie! Try again!");
+        result.textContent = "That's a tie! Try again!";
     }
+    playerScoreField.innerHTML = "Your score: " + playerScore;
+    computerScoreField.innerHTML = "The computer's score: " + computerScore;
+    resultField.innerHTML = "Result of this round: " + result.textContent;
+
     
 }
 
