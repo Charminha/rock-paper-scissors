@@ -15,47 +15,51 @@ function playRound(playerSelection, computerSelection){
     const result = document.createElement("p");
     const playerScoreField = document.querySelector("#your-score");
     const computerScoreField = document.querySelector("#computer-score");
-    if (playerSelection != computerSelection){
-        //if player choses rock
-        if (playerSelection == "rock"){
-            if (computerSelection == "paper"){
-                result.textContent = "Paper beats rock! You lose!";
-                computerScore += 1;
+    if (computerScore < 5 && playerScore < 5){
+        if (playerSelection != computerSelection){
+            //if player choses rock
+            if (playerSelection == "rock"){
+                if (computerSelection == "paper"){
+                    result.textContent = "Paper beats rock! You lose!";
+                    computerScore += 1;
+                }
+                else {
+                    result.textContent = "Rock beats scissors! You win!";
+                    playerScore += 1;
+                }
             }
-            else {
-                result.textContent = "Rock beats scissors! You win!";
-                playerScore += 1;
+            //if player choses paper
+            if (playerSelection == "paper"){
+                if (computerSelection == "scissors"){
+                    result.textContent = "Scissors beat paper! You lose!";
+                    computerScore += 1;
+                }
+                else {
+                    result.textContent = "Paper beats rock! You win!";
+                    playerScore += 1;
+                }
+            }
+            //if player choses scissors
+            if (playerSelection == "scissors"){
+                if (computerSelection == "rock"){
+                    result.textContent = "Rock beats scissors! You lose!";
+                    computerScore += 1;
+                }
+                else {
+                    result.textContent = "Scissors beat paper! You win!";
+                    playerScore += 1;
+                }
             }
         }
-        //if player choses paper
-        if (playerSelection == "paper"){
-            if (computerSelection == "scissors"){
-                result.textContent = "Scissors beat paper! You lose!";
-                computerScore += 1;
-            }
-            else {
-                result.textContent = "Paper beats rock! You win!";
-                playerScore += 1;
-            }
+        else {
+            result.textContent = "That's a tie! Try again!";
         }
-        //if player choses scissors
-        if (playerSelection == "scissors"){
-            if (computerSelection == "rock"){
-                result.textContent = "Rock beats scissors! You lose!";
-                computerScore += 1;
-            }
-            else {
-                result.textContent = "Scissors beat paper! You win!";
-                playerScore += 1;
-            }
-        }
+        playerScoreField.innerHTML = "Your score: " + playerScore;
+        computerScoreField.innerHTML = "The computer's score: " + computerScore;
+        resultField.innerHTML = "Result of this round: " + result.textContent;
+
     }
-    else {
-        result.textContent = "That's a tie! Try again!";
-    }
-    playerScoreField.innerHTML = "Your score: " + playerScore;
-    computerScoreField.innerHTML = "The computer's score: " + computerScore;
-    resultField.innerHTML = "Result of this round: " + result.textContent;
+    
 
     
 }
