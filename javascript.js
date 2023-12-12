@@ -60,37 +60,43 @@ function playRound(playerSelection, computerSelection){
     
 }
 
-function game(){
+function game() {
     playerScore = 0;
     computerScore = 0;
 
     const rockButton = document.querySelector("#rock");
     const paperButton = document.querySelector("#paper");
     const scissorsButton = document.querySelector("#scissors");
+    const winner = document.querySelector("#winner");
 
-    console.log("Enter your choice. Rock, paper or scissors?");
+    function updateWinner() {
+        if (playerScore == 5 || computerScore == 5) {
+            if (playerScore > computerScore) {
+                winner.innerHTML = "Winner: you";
+            } 
+            else if (playerScore < computerScore) {
+                winner.innerHTML = "Winner: computer";
+            } 
+        } 
+    }
 
-    rockButton.addEventListener('click', () => {playRound("rock", getComputerChoice())});
-    paperButton.addEventListener('click', () => {playRound("paper", getComputerChoice())});
-    scissorsButton.addEventListener('click', () => {playRound("scissors", getComputerChoice())});
-    
-        
-   
-    const playerSelection = null;
-    const computerSelection = getComputerChoice();
-    
-    /*
-    if (playerScore > computerScore){
-        console.log(`Congratulations! You won by ${playerScore} : ${computerScore}!`);
-    }
-    else if (playerScore < computerScore){
-        console.log(`You lost... by ${playerScore} : ${computerScore}.`);
-    }
-    else if (playerScore == computerScore){
-        console.log("It's a tie. Nobody won.");
-    }
-    */
+    rockButton.addEventListener('click', () => {
+        playRound("rock", getComputerChoice());
+        updateWinner();
+    });
+
+    paperButton.addEventListener('click', () => {
+        playRound("paper", getComputerChoice());
+        updateWinner();
+    });
+
+    scissorsButton.addEventListener('click', () => {
+        playRound("scissors", getComputerChoice());
+        updateWinner();
+    });
+
 }
+
 
 game();
 
