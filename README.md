@@ -1,2 +1,2 @@
 # rock-paper-scissors
-A simple console-based rock paper scissors game in Javascript as part of the Foundations curriculum of The Odin Project.
+A rock paper scissors game in Javascript with a very simple HTML-based UI as part of the Foundations curriculum of The Odin Project.
