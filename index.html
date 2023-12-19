@@ -7,29 +7,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Enter your choice. Rock, paper or scissors?</h1>
+    <h1>Rock Paper Scissors</h1>
 
     <div class="button-container">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
+        <button id="rock"><p>✊️</p>Rock</button>
+        <button id="paper"><p>🤚️</p>Paper</button>
+        <button id="scissors"><p>✌️</p>Scissors</button>
     </div>
     
-
-    
-    <div id="result-field">Result of this round:</div>
-    <div class="score-board">
-        <div id="your-score">Your score:</div>
-        <div id="computer-score">The computer's score:</div>
+    <div class="game-board">
+        <div id="result-field">Result of this round:</div>
+        <div class="score-board">
+            <div id="your-score">Your score: 0</div>
+            <div id="computer-score">Computer score: 0</div>
+        </div>
     </div>
-
+    
     <div id="winner">Winner:</div>
-    <button id="new-game">New game</button>
-
-
-
-
-
+    <div class="new-game-container">
+        <button id="new-game">New game</button>
+    </div>
+    
 
     <script src="javascript.js"></script>
 </body>

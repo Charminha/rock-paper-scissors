@@ -55,7 +55,7 @@ function playRound(playerSelection, computerSelection){
             result.textContent = "That's a tie! Try again!";
         }
         playerScoreField.innerHTML = "Your score: " + playerScore;
-        computerScoreField.innerHTML = "The computer's score: " + computerScore;
+        computerScoreField.innerHTML = "Computer score: " + computerScore;
         resultField.innerHTML = "Result of this round: " + result.textContent;
 
     }
