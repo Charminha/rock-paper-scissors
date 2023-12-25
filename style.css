@@ -6,9 +6,35 @@ body {
     color: rgb(39, 38, 38);
 }
 
-h1 {
+.title {
+    display: flex;
+    width: 378px;
+    align-items: center;
+}
+
+.title > p {
+    margin-right: 70px;
+}
+
+div.title > .p-box > p {
     color: rgb(24, 51, 87);
     font-family: 'Courier New', Courier, monospace;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.p-box {
+    padding: 4px;
+    width: 365px;
+}
+
+div.title {
+    
+}
+
+.spacer {
+    height: 20px;
 }
 
 .button-container {
