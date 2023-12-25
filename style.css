@@ -48,6 +48,10 @@ button {
     
 }
 
+.new-game-container button {
+    font-family: 'Courier New', Courier, monospace;
+}
+
 button p {
     font-size: 40px;
     margin: 8px;
